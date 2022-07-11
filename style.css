@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Lexend+Deca:wght@200;300;400&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left;
+    margin: 4rem 2rem;
+}
+
+section {
+    height: 70vh;
+    padding: 2.5rem;
+}
+
+section h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 2rem 0;
+    color: hsl(0, 0%, 95%);
+}
+
+section p {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.6;
+}
+
+section button {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-family: inherit;
+    cursor: pointer;
+    /* add this so the button text doesnt move after adding the border in hover state */
+    border: 2px solid  transparent;
+}
+
+.sedans {
+    background: var(--bright-orange);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.sedans button {
+    color: var(--bright-orange);
+}
+
+.sedans button:hover {
+    color: hsla(0, 0%, 100%, 0.75);  
+    background: var(--bright-orange); 
+    border: 2px solid  hsla(0, 0%, 100%, 0.75);
+}
+
+.suvs {
+    background: var(--dark-cyan);
+}
+
+.suvs button {
+    color: var(--dark-cyan);
+}
+
+.suvs button:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+    background: var(--dark-cyan);
+    border: 2px solid  hsla(0, 0%, 100%, 0.75);
+}
+
+.luxury {
+    background: var(--very-dark-cyan);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.luxury button {
+    color: var(--very-dark-cyan);
+}
+
+.luxury button:hover {
+    color: hsla(0, 0%, 100%, 0.75);
+    background: var(--very-dark-cyan);
+    border: 2px solid  hsla(0, 0%, 100%, 0.75);
+}
+
+@media(max-width: 727px) {
+    section {
+        height: 45vh;
+    }
+}
+
+@media(min-width: 728px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        max-width: 900px;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section {
+        height: 55vh
+    }
+
+    .sedans {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .luxury {
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+    }
+
+    section p {
+        line-height: 1.8;
+    }
+
+    section button {
+        margin-top: 7rem;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
